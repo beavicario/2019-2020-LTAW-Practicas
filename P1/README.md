@@ -1,3 +1,3 @@
 # Práctica 1
 
-PRUEBA Atom - Github
+PRUEBA: Atom - Github
