@@ -17,7 +17,7 @@ http.createServer( (req, res) => {
   //-- El código 200 se usa para indicar que todo está ok
   //-- En el campo Content-Type tenemos que introducir el tipo MIME
   //-- de lo que devolvemos
-  let mime = "text/unknow"
+  let mime = "text/hola"
   res.writeHead(200, {'Content-Type': mime});
 
   //-- Ahora escribimos el cuerpo: los datos a enviar, en html
@@ -44,5 +44,5 @@ http.createServer( (req, res) => {
 console.log("Servidor corriendo...")
 console.log("Puerto: " + PUERTO)
 
-// Nos devuelve un mime es deconocido -> let mime = "text/unknow".
+// Nos devuelve un mime es deconocido -> let mime = "text/hola".
 // En navegador no sabe interpretarlo y nos da la opción de descargarlo.
