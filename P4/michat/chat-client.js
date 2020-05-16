@@ -1,5 +1,5 @@
 function main() {
-  var nick = prompt("Whats your nick??");
+  var nick = prompt("¿Cuá es tu nick?");
   console.log("Bienvenido al chat")
 
   // WEBSOCKET.
