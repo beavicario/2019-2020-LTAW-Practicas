@@ -21,40 +21,9 @@ footer {
   text-align: center;
 }
 
- .column {
-   padding: 29px;
-   display: block;
-   position: static;
-   float: left;
+.container {
+  margin: 0;
  }
-
-#artesanas{
-  margin-top: 70px;
-  margin-right: 70px;
-  margin-bottom: 40px;
-  width:200px;
-  height:300px;
-  float:right;
-}
-
-#gluten{
-  margin-top: 70px;
-  margin-right: 70px;
-  margin-bottom: 40px;
-  width:200px;
-  height:300px;
-  float:right;
-}
-
-#especiales{
-  margin-top: 70px;
-  margin-right: 70px;
-  margin-bottom: 40px;
-  width:200px;
-  height:300px;
-  float:right;
-}
-
 
 a:link {
   color: SlateGrey;
@@ -91,14 +60,6 @@ h2{
   text-align: center;
   font-family: courier;
   font-size: 13px;
-}
-
-h3 {
-  color: powderblue;
-  text-align: center;
-  margin-left: 40px;
-  font-family: optima, sans-serif;
-  font-size: 15px;
 }
 
 h6{
