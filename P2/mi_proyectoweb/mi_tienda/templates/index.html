@@ -1,0 +1,98 @@
+
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> CERVEZAS 7ALEO </title>
+    <link rel="stylesheet" href="css/micss.css">
+  </head>
+  <body>
+    <div class="header">
+      <center>
+          <h1> <i> CERVEZAS 7ALEO </i></h1>
+          <hr>
+          <h2> ¡¡BIENVENIDOS!! </h2>
+          <p id="intro"> ¿Cansado de las cervezas de siempre? <br>
+          ¡Estás en el sitio ideal! <br>
+          <br>
+          <br>
+          COMPROMETIDOS CON EL MEDIO AMBIENTE <br>
+          </p>
+      </center>
+    </div>
+
+    <table class="container">
+      <tr>
+        <th>
+          <div class="column">
+              <img src="imagenes/burbujas.jpg" alt="CERVEZAS ARTESANAS" width="270" height="190">
+              <br>
+              <a href="artesanas.html"><button>CERVEZAS ARTESANAS</button></a>
+          </div>
+        </th>
+
+        <th>
+          <div class="column">
+              <img src="imagenes/burbujas.jpg" alt="CERVEZAS SIN GLUTEN" width="270" height="190">
+              <br>
+              <a href="singluten.html"><button>CERVEZAS SIN GLUTEN</button></a>
+          </div>
+        </th>
+
+        <th>
+          <div class="column">
+              <img src="imagenes/burbujas.jpg" alt="EDICIONES ESPECIALES" width="270" height="190">
+              <br>
+              <a href="especiales.html"><button>EDICIONES LIMITADAS</button></a>
+          </div>
+        </th>
+
+      </tr>
+    </table>
+
+    <!-- CAJA de BUSQUEDA -->
+    <!-- NO FUNCIONA! -->
+    <form action="." method="GET">
+      <p> ¿No encuentras alguna guía? ¡Pregúntanos! </p>
+      <div>
+        <input type="text" name="q" value="{{ query|escape }}">
+        <input type="submit" value="Search">
+      </div>
+    </form>
+
+    {% if query %}
+      <h2> Los resultados de búsqueda de:  "{{ query|escape }}":</h2>
+
+      {% if results %}
+        <ul>
+        {% for book in results %}
+            <li>{{ book|escape }}</l1>
+        {% endfor %}
+        </ul>
+      {% else %}
+          <p> ¡Lo sentimos! No hemos encontrado ningún libro con ese nombre.</p>
+      {% endif %}
+    {% endif %}
+
+    <!-- PEDIDOS -->
+    <div>
+      <p> ¿Quieres hacer un pedido? </p>
+      <form action="search.html">
+        <button type="submit"> ¡Pulse aquí! </button>
+      </form>
+    </div>
+
+    <footer>
+      <hr>
+      <center>
+        <p> Design by Beatriz Vicario <br>
+          Github: <a href="https://github.com/beavicario">github/beavicario</a></p>
+      </center>
+    </footer>
+
+  </body>
+
+</html>
