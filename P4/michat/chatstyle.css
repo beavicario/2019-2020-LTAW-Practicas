@@ -1,0 +1,13 @@
+body{
+  background-color: white;
+}
+h1{
+  align: center;
+  font-style: oblique;
+  font-stretch: normal;
+}
+div {
+  background-color: beige;
+  align: left;
+  border-radius: 3px;
+}
