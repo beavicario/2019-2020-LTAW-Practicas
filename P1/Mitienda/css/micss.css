@@ -1,0 +1,114 @@
+
+body {
+  background-color: white;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 150%;
+  height: auto;
+}
+
+footer {
+  padding: 50px;
+  text-align: center;
+  width: auto;
+}
+
+.header {
+  padding: 20px;
+  text-align: center;
+}
+
+ .column {
+   padding: 29px;
+   display: block;
+   position: static;
+   float: left;
+ }
+
+#artesanas{
+  margin-top: 70px;
+  margin-right: 70px;
+  margin-bottom: 40px;
+  width:200px;
+  height:300px;
+  float:right;
+}
+
+#gluten{
+  margin-top: 70px;
+  margin-right: 70px;
+  margin-bottom: 40px;
+  width:200px;
+  height:300px;
+  float:right;
+}
+
+#especiales{
+  margin-top: 70px;
+  margin-right: 70px;
+  margin-bottom: 40px;
+  width:200px;
+  height:300px;
+  float:right;
+}
+
+
+a:link {
+  color: SlateGrey;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: plum;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: SlateBlue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: PeachPuff;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+h1 {
+  color: gray;
+  text-align: center;
+  font-family: optima, sans-serif;
+  font-size: 20px;
+}
+
+h2{
+  text-align: center;
+  font-family: courier;
+  font-size: 13px;
+}
+
+h3 {
+  color: powderblue;
+  text-align: center;
+  margin-left: 40px;
+  font-family: optima, sans-serif;
+  font-size: 15px;
+}
+
+h6{
+  text-align: left;
+  margin-left: 100px;
+  font-family: optima, sans-serif;
+}
+
+p {
+  text-align: center;
+  font-family: courier;
+  font-size: 13px;
+}
