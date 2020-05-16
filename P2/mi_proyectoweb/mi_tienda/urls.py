@@ -1,15 +1,16 @@
 
-from django.urls import path
+# Punto de entrada principal:
 
-# -- Importar todas las vistas de mi_tienda
+from django.conf.urls import url
+from django.contrib import admin
 from . import views
 
-# -- Aquí se definen las URLs de nuestra tienda
-# -- Metemos de momento sólo la principal (índice)
-
 urlpatterns = [
-    # -- Vista pricipal (índice)
-    path('', views.index, name='index'),
-    path('test1/', views.test1, name='test1'),
-    path('test2/', views.test2, name='test2'),
+    url(r'^$', views.home_view),
+    url(r'^admin/', admin.site.urls),
+    url(r'^index', views.home_view),
+    url(r'^artesanas', views.artesanas_view),
+    url(r'^singluten', views.singluten_view),
+    url(r'^especiales', views.especiales_view),
+    url(r'^search', views.search_view),
 ]

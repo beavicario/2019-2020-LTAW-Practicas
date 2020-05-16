@@ -1,59 +1,57 @@
 
-from django.http import HttpResponse
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
 from django.shortcuts import render
-from random import randint
+from django.http import HttpResponse
 
-# -- Vista principal de mi tienda
-# -- El nombre de la vista puede ser cualquiera. Nosotros lo hemos
-# -- llamado index, pero se podría haber llamado pepito
-def index(request):
-    return HttpResponse("Hola! esta es la página principal de Mi tienda!")
+from mi_tienda.models import Artesanas
+from mi_tienda.models import Singluten
+from mi_tienda.models import Especiales
 
-# -- Ejemplo de generacion a partir de cadenas con código html
-def test1(request):
 
-    # -- Obtener el número aleatorio
-    numero = randint(0, 100)
+# Create your views here.
+def home_view (request):
+    return render(request, "index.html", {})
 
-    # Párrafo a insertar
-    P = "<p>Numero aleatorio: " + str(numero) + " </p>"
+def lartesanas_view (request):
+    return render(request, "artesanas.html", {})
 
-    PAGINA_INI = """
-    <!DOCTYPE html>
-    <html lang="es" dir="ltr">
-      <head>
-        <meta charset="utf-8">
-        <title>Test1</title>
-      </head>
-      <body>
-        <h1>TEST1</h1>
-    """
+def singluten_view (request):
+    return render(request, "singluten.html", {})
 
-    PAGINA_FIN = """
-      </body>
-    </html>
-    """
-    return HttpResponse(PAGINA_INI + P + PAGINA_FIN)
+def especiales_view (request):
+    return render(request, "especiales.html", {})
 
-# -- Ejemplo de generacion mediante una plantilla en FICHERO
-def test3(request):
+def search_view (request):
+    return render(request, "search.html", {})
 
-    # -- Obtener el número aleatorio
-    numero = randint(0, 100)
 
-    # -- Leer la plantilla del fichero
-    t = get_template('test.html')
+def searching(request):
+    query = request.GET.get('q', '')
+    if query:
+        qset = (
+            Q(nombre__icontains=query) |
+            Q(tipo__icontains=query) |
+            Q(alcohol__icontains=query) |
+            Q(origen__icontains=query) |
+            Q(precio__icontains=query) |
+            Q(stock__icontains=query)
+        )
+        results = Artesanas.objects.filter(qset).distinct()
+    else:
+        results = []
+    return render(requets, {
+        "results": results,
+        "query": query,
+    })
 
-    # -- Crear el contexto: Asignar el numero
-    c = {'numero': str(numero)}
-
-    # -- Obtener la pagina html final
-    html = t.render(c)
-
+"""
+def list(request):
+    objects = Artesanas.objects.all()
+    html = "<p> Listado de articulos </p>"
+    for elt in objects:
+        print(elt.name)
+        html += '<p>'+ elt.name + ' ' + str(elt.precio) + '<p>'
     return HttpResponse(html)
-
-# -- Ejemplo de uso de la función Render
-def test4(request):
-    # -- Obtener el número aleatorio
-    numero = randint(0, 100)
-    return render(request, 'test.html', {'numero':str(numero)})
+"""
