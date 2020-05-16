@@ -53,10 +53,10 @@ io.on('connection', function(socket){
               '/date : Devuelve la fecha actual';
         io.emit('new_message', msg);
       }else if (msg == '/list'){
-        msg = 'Numero de usuarios conectados: ' + num_users;
+        msg = 'Número de usuarios conectados: ' + num_users;
         io.emit('new_message', msg);
       }else if (msg == '/hello'){
-        msg = 'Server: Bienvenido al Chat de Beatriz.';
+        msg = 'SERVER: Bienvenido al Chat de Beatriz.';
         io.emit('new_message', msg);
       }else if (msg == '/date'){
         var d = new Date();
