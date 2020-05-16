@@ -48,15 +48,15 @@ io.on('connection', function(socket){
       // Emitir un mensaje a todos los clientes conect.
       if (msg == '/help'){
         msg = 'SERVER Supported commands: ' + "<br>" +
-              '/list : Returns the number of connected users' + "<br>" +
-              '/hello : Returns greetings from theserver' + "<br>" +
-              '/date : Returns current date';
+              '/list : Devuelve el número de usuarios conectados' + "<br>" +
+              '/hello : Devuelve saludos desde el servidor' + "<br>" +
+              '/date : Devuelve la fecha actual';
         io.emit('new_message', msg);
       }else if (msg == '/list'){
-        msg = 'Total number of connected users: ' + num_users;
+        msg = 'Numero de usuarios conectados: ' + num_users;
         io.emit('new_message', msg);
       }else if (msg == '/hello'){
-        msg = 'Server: Welcome to the chat';
+        msg = 'Server: Bienvenido al Chat de Beatriz.';
         io.emit('new_message', msg);
       }else if (msg == '/date'){
         var d = new Date();
