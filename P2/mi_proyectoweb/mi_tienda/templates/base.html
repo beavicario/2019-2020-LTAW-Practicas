@@ -1,0 +1,38 @@
+
+{%load staticfiles%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> CERVEZAS 7ALEO </title>
+    <link rel="stylesheet" href="{% static 'css/micss.css'%}" >
+  </head>
+  <body>
+    <div class="header">
+      <center>
+          <h1> <i> CERVEZAS 7ALEO </i></h1>
+          <hr>
+          <h2> ¡¡BIENVENIDOS!! </h2>
+          <p id="intro"> ¿Cansado de las cervezas de siempre? <br>
+          ¡Estás en el sitio ideal! <br>
+          <br>
+          <br>
+          COMPROMETIDOS CON EL MEDIO AMBIENTE <br>
+          </p>
+      </center>
+    </div>
+
+    {%block content%}
+    {%endblock%}
+
+    <footer>
+      <hr>
+      <center>
+        <p> Design by Beatriz Vicario <br>
+          Github: <a href="https://github.com/beavicario">github/beavicario</a></p>
+      </center>
+    </footer>
+
+  </body>
+
+</html>

@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+{%block content%}
+{%load staticfiles%}
+
+<a href="/mi_tienda">
+  <img src="{% static 'imagenes/back.png'%}" alt="RETURN" width="70" height="90">
+</a>
+
+<table class="container">
+  <tr>
+
+{% for c in cerveza %}
+    <th>
+      <div class="column">
+        <img id="{{c.clase|lower}}" src="{% static c.get_image %}" alt="{{ c.nombre }}">
+        <h6> DETALLES DEL PRODUCTO </h6>
+          <p id="{{ c.get_id }}">
+            <b> Tipo: </b> Cerveza {{ c.tipo }} <br>
+            <b> Alcohol: </b> {{ c.alcohol }} Grados <br>
+            <b> Origen: </b> {{ c.origen }} <br>
+            <b> Precio: </b> {{ c.precio }} €
+          </p>
+      </div>
+    </th>
+{% endfor %}
+</tr>
+</table>
+
+{%endblock%}
