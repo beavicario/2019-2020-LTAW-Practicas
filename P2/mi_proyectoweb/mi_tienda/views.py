@@ -8,3 +8,6 @@ def index(request):
 
 def cerveza(request,tipo):
     return render (request, "cerveza.html", {"cerveza":Producto.objects.filter(clase=tipo)})
+
+def pedido(request):
+    return render(request, 'pedido.html', {'pedido' : '', 'precio' : ''})
