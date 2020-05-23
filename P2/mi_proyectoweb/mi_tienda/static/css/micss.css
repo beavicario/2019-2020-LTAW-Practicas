@@ -1,13 +1,14 @@
 
-body {
-  background-color: white;
-  margin: 0;
+body{
+  box-sizing: border-box;
+  margin: 0px;
 }
 
 img {
-  display: block;
-  max-width: 150%;
+  padding: 10px;
+  max-width: 160%;
   height: auto;
+  float: center;
 }
 
 footer {
@@ -21,55 +22,52 @@ footer {
   text-align: center;
 }
 
-.container {
-  margin: 0;
+button{
+  text-decoration: none;
+  font-weight: 20;
+  font-size: 20px;
+  color: black;
+  background-color: beige;
+  border-radius: 6px;
+  border: 1px solid black;
+  font-family: helvetica;
+  font-style: italic;
+  float: center;
+}
+
+button:hover {
+      background-color: brown;
+      color: beige;
  }
 
-a:link {
-  color: SlateGrey;
-  background-color: transparent;
-  text-decoration: none;
-}
+.container {
+  height: 400px;
+  width: 100%;
 
-a:visited {
-  color: plum;
-  background-color: transparent;
-  text-decoration: none;
-}
+ }
 
-a:hover {
-  color: SlateBlue;
-  background-color: transparent;
-  text-decoration: underline;
-}
+ h1 {
+   color: black;
+   text-align: center;
+   font-family: serif;
+   font-size: 50px;
+ }
 
-a:active {
-  color: PeachPuff;
-  background-color: transparent;
-  text-decoration: underline;
-}
+ h2{
+   color: black;
+   text-align: center;
+   font-family: courier;
+   font-size: 20px;
+ }
 
-h1 {
-  color: gray;
-  text-align: center;
-  font-family: optima, sans-serif;
-  font-size: 20px;
-}
+ h6{
+   text-align: center;
+   font-family: courier;
+   font-size: 15px;
+ }
 
-h2{
-  text-align: center;
-  font-family: courier;
-  font-size: 13px;
-}
-
-h6{
-  text-align: left;
-  margin-left: 100px;
-  font-family: optima, sans-serif;
-}
-
-p {
-  text-align: center;
-  font-family: courier;
-  font-size: 13px;
-}
+ p {
+   text-align: center;
+   font-family: courier;
+   font-size: 15px;
+ }
