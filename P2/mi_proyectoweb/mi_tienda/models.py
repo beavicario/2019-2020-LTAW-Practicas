@@ -22,7 +22,7 @@ class Producto (models.Model):
     def get_id(self):
         return self.nombre.replace(" ", "").lower()
 
-class Pedido(models.Model):
+class Pedido (models.Model):
 
     nombre = models.CharField(max_length=50)
     articulo = models.CharField(max_length=150, default='[]')

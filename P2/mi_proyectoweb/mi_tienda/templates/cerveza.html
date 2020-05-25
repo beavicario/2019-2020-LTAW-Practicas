@@ -13,7 +13,7 @@
 {% for c in cerveza %}
     <th>
       <div class="column">
-        <img id="{{c.clase|lower}}" src="{% static c.get_image %}" alt="{{ c.nombre }}">
+        <img id="{{c.clase|lower}}" href="" src="{% static c.get_image %}" alt="{{ c.nombre }}">
         <h6> DETALLES DEL PRODUCTO </h6>
           <p id="{{ c.get_id }}">
             <b> Tipo: </b> Cerveza {{ c.tipo }} <br>
@@ -21,6 +21,17 @@
             <b> Origen: </b> {{ c.origen }} <br>
             <b> Precio: </b> {{ c.precio }} €
           </p>
+          <form class="" action="comprar" method="post">
+            {% csrf_token %}
+            <label > NOMBRE: </label>
+            <input type="text" name="nombre" value="" required/>
+            <br>
+            <label > ARTÍCULO: </label>
+            <input type="text" name="cerveza" value="{{c.nombre}}" readonly/>
+            <br>
+            <br>
+            <input type="submit" value="COMPRAR"/>
+          </form>
       </div>
     </th>
 {% endfor %}

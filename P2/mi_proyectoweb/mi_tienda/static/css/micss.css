@@ -17,6 +17,10 @@ footer {
   width: auto;
 }
 
+.carrito{
+  height: 40px;
+}
+
 .header {
   padding: 20px;
   text-align: center;
