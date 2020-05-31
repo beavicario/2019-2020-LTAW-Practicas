@@ -26,6 +26,22 @@ footer {
   height: 40px;
 }
 
+.datoscompra{
+  margin-left: 100px;
+  height: 250px;
+}
+
+.metodopago{
+  margin-left: 100px;
+  height: 200px;
+}
+
+.registro{
+  margin-left: 200px;
+  padding: 50px;
+  height: 100px;
+}
+
 button{
   text-decoration: none;
   font-weight: 20;
