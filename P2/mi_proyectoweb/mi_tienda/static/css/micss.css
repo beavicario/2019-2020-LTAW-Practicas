@@ -4,14 +4,14 @@ body{
   margin: 0px;
 }
 
-img {
+img{
   padding: 10px;
   max-width: 160%;
   height: auto;
   float: center;
 }
 
-footer {
+footer{
   padding: 50px;
   text-align: center;
   width: auto;
@@ -21,7 +21,7 @@ footer {
   height: 40px;
 }
 
-.header {
+.header{
   padding: 20px;
   text-align: center;
 }
@@ -39,18 +39,18 @@ button{
   float: center;
 }
 
-button:hover {
+button:hover{
       background-color: brown;
       color: beige;
  }
 
-.container {
+.container{
   height: 400px;
   width: 100%;
 
  }
 
- h1 {
+ h1{
    color: black;
    text-align: center;
    font-family: serif;
@@ -70,7 +70,7 @@ button:hover {
    font-size: 15px;
  }
 
- p {
+ p{
    text-align: center;
    font-family: courier;
    font-size: 15px;
