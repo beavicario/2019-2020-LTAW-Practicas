@@ -20,3 +20,8 @@ index.html: Página principal del dominio al cual se accede desde el Navegador. 
 Consta de una clase llamada cabecera donde se presenta el nombre de nuestra tienda y varios títulos o comentarios para dar la bienvenida al usuario.
 Después nos encontramos una nueva sección con los submenús que presenta la página Web, y el atributo a href="" nos lleva a los distintos HTML de las cervezas: artesanas.html, especiales.html y singluten.htlm. Estos HTML utilizan una estructura similar al index.html, constan de una sección cabecera y otra sección con los artículos las cervezas.
 Por último, todos los HTML cuentan con un pie de página que contiene mis datos.
+
+server.js: Código JavaScript. Se encarga de recibir las peticiones del cliente, el navegador, y enviar una respuesta a cada una de esas peticiones.
+Nuestro servidor se encuentra configurado en el puerto 8080.
+Se configura el servidor para lanzarlo mediante Nodejs. El cliente le envía una petición y el servidor, una vez recibida esa petición, accede a sus archivos locales para generar una respuesta al cliente.
+Además encontramos un bucle que lee el fichero y en caso de no encontrarlo, devuelve un mensaje de error "404 Not Found"
