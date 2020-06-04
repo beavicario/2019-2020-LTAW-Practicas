@@ -14,3 +14,9 @@ En el subtipo de cerveza "Sin Alcohol" se encuentra un error, 404 Not Found.
 Este error se declara en el index.htlm ya que se crea un href="sinalcohol.html" que hace referencia a un HTML que no existe.
 
 Además consta de un CSS el cuál le da estilo a nuestra página Web.
+
+ESTRUCTURA P1.
+index.html: Página principal del dominio al cual se accede desde el Navegador. En el Servidor se declara que la raíz devuelva "index.html"
+Consta de una clase llamada cabecera donde se presenta el nombre de nuestra tienda y varios títulos o comentarios para dar la bienvenida al usuario.
+Después nos encontramos una nueva sección con los submenús que presenta la página Web, y el atributo a href="" nos lleva a los distintos HTML de las cervezas: artesanas.html, especiales.html y singluten.htlm. Estos HTML utilizan una estructura similar al index.html, constan de una sección cabecera y otra sección con los artículos las cervezas.
+Por último, todos los HTML cuentan con un pie de página que contiene mis datos.
