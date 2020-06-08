@@ -1,2 +1,6 @@
 # 2019-2020-LTAW-Practicas
-Mis prácticas de la asignatura Laboratorio de Tecnologías audiovisuales en la Web. Curso 2019-2020 
+
+P1 - Mi Tienda en Nodejs
+P2 - Mi Tienda Django.
+P3 - Mi Tienda AJAX
+P4 - Chat
